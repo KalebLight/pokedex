@@ -13,17 +13,22 @@ function Navbar() {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1 }} className={classes.divNavbar}>
         <AppBar position="static" className={classes.navbar}>
           <Toolbar>
-            <img
-              className={classes.icon}
-              src="https://cdn.icon-icons.com/icons2/896/PNG/512/pokemon_go_play_game_cinema_film_movie_icon-icons.com_69163.png"
-              alt="Minha Figura"
-            />
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Pokedex
             </Typography>
+            <Button color="inherit">Login</Button>
           </Toolbar>
         </AppBar>
       </Box>
