@@ -9,12 +9,15 @@ function CardFilho({ pokemon, id }) {
   const photoURL = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png`;
   return (
     <Card className={classes.card}>
-      <div>
-        <div className={classes.imgDiv}>
-          <Avatar variant="square" className={classes.img} src={photoURL} />
-        </div>
+      <Avatar variant="square" className={classes.imgDiv} src={photoURL} />
+
+      <div className={classes.infoDiv}>
+        <p className={classes.info}>#{id}</p>
+        <p className={classes.info}>
+          {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+          {/* para deixar a primeira letra maiúscula */}
+        </p>
       </div>
-      <div className={classes.infoDiv}>{pokemon.name}</div>
     </Card>
   );
 }
