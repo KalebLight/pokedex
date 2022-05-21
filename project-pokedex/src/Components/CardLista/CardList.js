@@ -11,11 +11,11 @@ function CardList() {
   function fixIdPokemon(id) {
     var stringId = String(id + 1);
     var newId = '';
-    if (stringId.length == 1) {
+    if (stringId.length === 1) {
       newId = '00' + stringId;
       return newId;
     }
-    if (stringId.length == 2) {
+    if (stringId.length === 2) {
       newId = '0' + stringId;
       return newId;
     } else {
@@ -33,17 +33,12 @@ function CardList() {
       });
   }
 
-  function showPokemon() {
-    console.log(pokemons);
-  }
-
   useEffect(() => {
     loadPokemons();
   }, []);
 
   return (
     <>
-      <button onClick={showPokemon}>eaeae</button>
       <Card className={classes.card}>
         {pokemons.map((pokemon, index) => (
           <CardFilho key={index} id={fixIdPokemon(index)} pokemon={pokemon} />
