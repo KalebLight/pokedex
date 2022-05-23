@@ -8,16 +8,20 @@ function CardFilho({ pokemon, id }) {
 
   const photoURL = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png`;
   return (
-    <Card className={classes.card}>
+    <Card className={[classes.card, 'cardHover']}>
       <div className={classes.divImgId}>
-        <Avatar variant="square" className={classes.imgDiv} src={photoURL} />
-        <p className={classes.idInfo}>#{id}</p>
+        <Avatar
+          variant="square"
+          className={[classes.imgDiv, 'imgDivHover']}
+          src={photoURL}
+        />
+        <p className={[classes.idInfo]}>#{id}</p>
       </div>
 
       <div className={classes.infoDiv}>
         <p className={classes.info}>
           {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-          {/* para deixar a primeira letra maiúscula */}
+          {/* para deixar a primeira letra maiúscula*/}
         </p>
       </div>
     </Card>

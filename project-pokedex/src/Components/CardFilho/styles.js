@@ -5,26 +5,34 @@ export default makeStyles((theme) => ({
     // backgroundColor: COLORS.silver,
     width: '210px',
     height: '245px',
+    backgroundColor: COLORS.silver,
     display: 'flex',
     flexWrap: 'wrap',
     flexDirection: 'column',
     margin: '10px 10px',
+    transition: 'all 0.3s ease !important',
+    '&:hover': {
+      backgroundColor: '#A1a1a1 !important',
+      cursor: 'pointer',
+
+      // opacity: '0.9',
+    },
   },
   divImgId: {
     display: 'grid',
     position: 'absolute',
   },
   imgDiv: {
-    height: '210px !important',
-    width: '210px !important',
-    backgroundColor: COLORS.silver,
+    height: '200px !important',
+    width: '200px !important',
   },
   idInfo: {
     position: 'absolute',
     bottom: '0',
     fontWeight: 'bold',
     fontSize: '13px',
-    marginLeft: '2px',
+    marginLeft: '5px',
+    marginBottom: '-7px',
   },
   infoDiv: {
     backgroundColor: '#f1f1f1',
