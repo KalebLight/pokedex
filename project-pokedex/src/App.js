@@ -1,14 +1,26 @@
 import './App.css';
 import Home from './Pages/Home/Home';
-// import { Router, Switch, Routes, Route } from 'react-router-dom';
+import PokemonInfoPage from '../src/Components/PokemonInfoPage/PokemonInfoPage';
+import Navbar from '../src/Components/Navbar/Navbar';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import useStyles from './appStyles';
+import Teste from './Components/Teste/Teste';
 
 function App() {
   const classes = useStyles();
   return (
-    <div className={classes.app}>
-      <Home></Home>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/pokemon"
+          element={<PokemonInfoPage>aa</PokemonInfoPage>}
+        />
+        <Route path="/" exact element={<Home></Home>} />
+        <Route path="/teste" exact element={<Teste></Teste>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -11,6 +11,6 @@ export default makeStyles((theme) => ({
     backgroundColor: COLORS.themePrimary,
     borderRadius: 5,
     marginBottom: 30,
-    width: '98vw !important',
+    width: '100% !important',
   },
 }));

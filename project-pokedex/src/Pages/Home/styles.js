@@ -12,9 +12,4 @@ export default makeStyles((theme) => ({
     backgroundColor: COLORS.black,
     height: '100% !important',
   },
-  btn: {
-    fontSize: 20,
-    backgroundColor: COLORS.themeSecondary,
-    height: '40px',
-  },
 }));
