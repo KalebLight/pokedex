@@ -15,7 +15,7 @@ function Navbar() {
           <Toolbar>
             <img
               className={classes.icon}
-              src="https://cdn.icon-icons.com/icons2/896/PNG/512/pokemon_go_play_game_cinema_film_movie_icon-icons.com_69163.png"
+              // src="https://cdn.icon-icons.com/icons2/896/PNG/512/pokemon_go_play_game_cinema_film_movie_icon-icons.com_69163.png"
               alt="Pokebola"
             />
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>

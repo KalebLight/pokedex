@@ -4,10 +4,10 @@ import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import { Link } from 'react-router-dom';
 
-function CardFilho({ pokemon, id }) {
+function CardFilho({ pokemon, id, idPhoto }) {
   const classes = useStyle();
 
-  const photoURL = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png`;
+  const photoURL = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${idPhoto}.png`;
   return (
     <Link to={`/pokemon/${id}`}>
       <Card className={[classes.card, 'cardHover']}>
@@ -17,7 +17,7 @@ function CardFilho({ pokemon, id }) {
             className={[classes.imgDiv, 'imgDivHover']}
             src={photoURL}
           />
-          <p className={[classes.idInfo]}>#{id}</p>
+          <p className={[classes.idInfo]}>#{idPhoto}</p>
         </div>
 
         <div className={classes.infoDiv}>

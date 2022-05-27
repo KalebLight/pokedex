@@ -8,7 +8,7 @@ function CardList() {
   const classes = useStyle();
   const [pokemons, setPokemons] = useState([]);
 
-  function fixIdPokemon(id) {
+  function getIdPhotoPokemon(id) {
     var stringId = String(id + 1);
     var newId = '';
     if (stringId.length === 1) {
@@ -41,7 +41,12 @@ function CardList() {
     <>
       <Card className={classes.card}>
         {pokemons.map((pokemon, index) => (
-          <CardFilho key={index} id={fixIdPokemon(index)} pokemon={pokemon} />
+          <CardFilho
+            key={index}
+            id={index + 1}
+            idPhoto={getIdPhotoPokemon(index)}
+            pokemon={pokemon}
+          />
         ))}
       </Card>
     </>
